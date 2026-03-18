@@ -23,7 +23,6 @@ def process_file(filepath):
         content,
         flags=re.DOTALL
     )
-
     # Add script tag
     content = content.replace('<script src="script.js"></script>', '<script src="products.js"></script>\n    <script src="script.js"></script>')
 

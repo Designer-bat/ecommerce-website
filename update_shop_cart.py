@@ -13,7 +13,6 @@ shop_content = re.sub(
     shop_content,
     flags=re.DOTALL
 )
-
 # Add products.js
 if '<script src="products.js"></script>' not in shop_content:
     shop_content = shop_content.replace('<script src="script.js"></script>', '<script src="products.js"></script>\n    <script src="script.js"></script>')
