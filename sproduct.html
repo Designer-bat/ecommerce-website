@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details — swoshop.com Fashion Store</title>
+    <meta name="description" content="View product details, size options, and add to cart at swoshop.com Fashion Store.">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern.css">
+</head>
+<body>
+
+    <!-- ======= HEADER ======= -->
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt="swoshop.com Logo"></a>
+        <div>
+            <ul id="navbar">
+                <a href="#" id="close"><i class="ph ph-x"></i></a>
+                <li><a href="index.html"><i class="ph ph-house"></i> Home</a></li>
+                <li><a class="active" href="shop.html"><i class="ph ph-t-shirt"></i> Shop</a></li>
+                <li><a href="blog.html"><i class="ph ph-newspaper"></i> Blog</a></li>
+                <li><a href="about.html"><i class="ph ph-info"></i> About</a></li>
+                <li><a href="contact.html"><i class="ph ph-chat-circle"></i> Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html" title="Shopping Cart"><i class="ph ph-shopping-bag"></i></a>
+                </li>
+                <li>
+                    <button id="dark-mode-toggle" title="Toggle Dark Mode">
+                        <div class="dm-icon">
+                            <i class="ph ph-moon"></i>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html" style="position:relative;">
+                <i class="ph ph-shopping-bag" style="font-size:24px;color:var(--text-1);"></i>
+            </a>
+            <i class="ph ph-list" id="bar" style="font-size:28px;cursor:pointer;"></i>
+        </div>
+    </section>
+
+    <!-- ======= PRODUCT DETAILS ======= -->
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="img/products/f1.jpg" width="100%" id="MainImg" alt="Product Image">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/products/f1.jpg" width="100%" class="small-img" alt="View 1">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/f2.jpg" width="100%" class="small-img" alt="View 2">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/f3.jpg" width="100%" class="small-img" alt="View 3">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/products/f4.jpg" width="100%" class="small-img" alt="View 4">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-pro-details">
+            <h6>Adidas · Premium Collection</h6>
+            <h4>Astronaut T-Shirt</h4>
+            <h2>रू 139</h2>
+
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:20px;">
+                <div style="display:flex;gap:3px;">
+                    <i class="fas fa-star" style="color:#f59e0b;font-size:14px;"></i>
+                    <i class="fas fa-star" style="color:#f59e0b;font-size:14px;"></i>
+                    <i class="fas fa-star" style="color:#f59e0b;font-size:14px;"></i>
+                    <i class="fas fa-star" style="color:#f59e0b;font-size:14px;"></i>
+                    <i class="fas fa-star-half-alt" style="color:#f59e0b;font-size:14px;"></i>
+                </div>
+                <span style="font-size:13px;color:var(--text-3);font-weight:500;">(128 Reviews)</span>
+            </div>
+
+            <select id="size-select">
+                <option value="">Select Size</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+
+            <div class="qty-cart-row">
+                <input type="number" value="1" min="1" max="99">
+                <button class="normal" onclick="addToCart(event, 1)">
+                    <i class="ph ph-shopping-cart-simple"></i> Add to Cart
+                </button>
+            </div>
+
+            <!-- Features strip -->
+            <div style="display:flex;gap:20px;flex-wrap:wrap;padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:20px;">
+                <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-3);">
+                    <i class="ph ph-truck" style="color:var(--primary);font-size:18px;"></i> Free Shipping
+                </span>
+                <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-3);">
+                    <i class="ph ph-arrow-counter-clockwise" style="color:var(--primary);font-size:18px;"></i> 30-Day Returns
+                </span>
+                <span style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-3);">
+                    <i class="ph ph-shield-check" style="color:var(--primary);font-size:18px;"></i> Secure Payment
+                </span>
+            </div>
+
+            <h4>Product Details</h4>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quis molestiae ullam distinctio minus quisquam cupiditate vero in laboriosam. Premium quality fabric, machine washable, slim fit design crafted for everyday comfort and style. Available in multiple colors and sizes to suit your wardrobe needs.</span>
+        </div>
+    </section>
+
+    <!-- ======= RELATED PRODUCTS ======= -->
+    <section id="product1" class="section-p1">
+        <h2>You May Also Like</h2>
+        <p>Similar Products</p>
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/n1.jpg" alt="Blue Denim Shirts">
+                <div class="des">
+                    <span>Zara</span>
+                    <h5>Blue Denim Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>रू 120</h4>
+                </div>
+                <a href="#" class="cart" onclick="addToCart(event, 9)"><i class="ph ph-shopping-cart-simple"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/n2.jpg" alt="Checked Casual Shirts">
+                <div class="des">
+                    <span>Zara</span>
+                    <h5>Checked Casual Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>रू 75</h4>
+                </div>
+                <a href="#" class="cart" onclick="addToCart(event, 10)"><i class="ph ph-shopping-cart-simple"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/n3.jpg" alt="White Formal Shirts">
+                <div class="des">
+                    <span>Zara</span>
+                    <h5>White Formal Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>रू 90</h4>
+                </div>
+                <a href="#" class="cart" onclick="addToCart(event, 11)"><i class="ph ph-shopping-cart-simple"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='sproduct.html'">
+                <img src="img/products/n4.jpg" alt="Printed T-Shirts">
+                <div class="des">
+                    <span>Zara</span>
+                    <h5>Printed T-Shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>रू 45</h4>
+                </div>
+                <a href="#" class="cart" onclick="addToCart(event, 12)"><i class="ph ph-shopping-cart-simple"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= NEWSLETTER ======= -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4><i class="ph ph-envelope-simple-open"></i> Sign Up for Newsletters</h4>
+            <p>Get exclusive deals, style guides &amp; new arrivals. <span>No spam, ever.</span></p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Enter your email address">
+            <button class="normal"><i class="ph ph-paper-plane-tilt"></i> Subscribe</button>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="swoshop.com">
+            <h4>Contact</h4>
+            <p><i class="ph ph-map-pin"></i> 123 Fashion Street, New York, NY</p>
+            <p><i class="ph ph-phone"></i> +1 (355) 698–7654</p>
+            <p><i class="ph ph-clock"></i> Mon–Sat: 9:00 AM – 6:00 PM</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html"><i class="ph ph-arrow-right"></i> About Us</a>
+            <a href="#"><i class="ph ph-arrow-right"></i> Delivery Information</a>
+            <a href="#"><i class="ph ph-arrow-right"></i> Privacy Policy</a>
+            <a href="#"><i class="ph ph-arrow-right"></i> Terms &amp; Conditions</a>
+            <a href="contact.html"><i class="ph ph-arrow-right"></i> Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#"><i class="ph ph-sign-in"></i> Sign In</a>
+            <a href="cart.html"><i class="ph ph-shopping-bag"></i> View Cart</a>
+            <a href="#"><i class="ph ph-heart"></i> My Wishlist</a>
+            <a href="#"><i class="ph ph-package"></i> Track My Order</a>
+            <a href="#"><i class="ph ph-question"></i> Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play Store</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="App Store">
+                <img src="img/pay/play.jpg" alt="Play Store">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="Payment Methods">
+        </div>
+        <div class="copyright">
+            <p>© 2024 swoshop.com Fashion Store. Made with <i class="ph ph-heart" style="color:var(--primary);"></i> for style lovers.</p>
+        </div>
+    </footer>
+
+    <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallImgs = document.querySelectorAll(".small-img");
+
+        smallImgs.forEach(function(img, index) {
+            img.parentElement.addEventListener('click', function() {
+                // Update main image
+                MainImg.src = img.src;
+                // Highlight active thumbnail
+                document.querySelectorAll('.small-img-col').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        // Set first as active
+        if (document.querySelector('.small-img-col')) {
+            document.querySelector('.small-img-col').classList.add('active');
+        }
+    </script>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
